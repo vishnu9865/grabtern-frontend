@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "../styles/LoginDropdown.module.css";
 import router from "next/router";
+import Image from "next/image";
 
 const DropdownCard = ({ isUserLoggedIn }) => {
   const [loginOption, setLoginOption] = useState(false);
@@ -56,23 +57,6 @@ const DropdownCard = ({ isUserLoggedIn }) => {
                 localStorage.getItem("mentor_picture") ||
                 "assets/img/icon/no-profile-picture.webp"
               }
-              alt="not found"
-            />
-            <Image
-              style={{
-                width: "35px",
-                height: "auto",
-                borderRadius: "50%",
-                display: "inline",
-              }}
-              src={
-                localStorage.getItem("user_picture") ||
-                localStorage.getItem("mentor_picture") ||
-                "assets/img/icon/no-profile-picture.webp"
-              }
-              alt="not found"
-              width="35"
-              height="auto"
             />
           </button>
         ) : (
